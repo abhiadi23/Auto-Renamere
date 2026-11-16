@@ -1,6 +1,5 @@
 git+https://github.com/abhiadi23/cbcrypto.git
 git+https://github.com/abhiadi23/cbgram.git
-pyromod
 motor
 dnspython
 hachoir
