@@ -9,8 +9,8 @@ import random
 import string 
 import requests
 from datetime import datetime, timedelta
-from pyromod import listen
 from pyrogram import Client, filters
+from pyrogram.errors import ListenerTimeout
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from helper.database import rexbots
 from config import Config
@@ -392,7 +392,7 @@ async def cb_handler(client, query: CallbackQuery):
                         [InlineKeyboardButton("Hᴏᴍᴇ", callback_data="home"), InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
                     ])
                 )
-            except asyncio.TimeoutError:
+            except (asyncio.TimeoutError, ListenerTimeout):
                 await query.message.reply_text("Tɪᴍᴇᴏᴜᴛ. Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
             except Exception as e:
                 logger.error(f"Error setting verification 1: {e}")
@@ -417,7 +417,7 @@ async def cb_handler(client, query: CallbackQuery):
                         [InlineKeyboardButton("Hᴏᴍᴇ", callback_data="home"), InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
                     ])
                 )
-            except asyncio.TimeoutError:
+            except (asyncio.TimeoutError, ListenerTimeout):
                 await query.message.reply_text("Tɪᴍᴇᴏᴜᴛ. Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
             except Exception as e:
                 logger.error(f"Error setting verification 2: {e}")
