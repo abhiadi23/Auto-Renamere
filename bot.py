@@ -69,5 +69,11 @@ class Bot(Client):
             except Exception as e:
                 print(f"Failed to send message in chat {chat_id}: {e}")
 
+    # Needed because start() is overridden as async: run() then awaits self.stop(),
+    # and without an async override cbgram's wrapped stop() returns None -> TypeError on SIGTERM.
+    async def stop(self, *args):
+        await super().stop()
+        print("Bot stopped.")
+
 
 Bot().run()
