@@ -1,6 +1,6 @@
-pyrogram==2.0.80
+git+https://github.com/abhiadi23/cbcrypto.git
+git+https://github.com/abhiadi23/cbgram.git
 pyromod
-TgCrypto
 motor
 dnspython
 hachoir
