@@ -1,5 +1,5 @@
 cbcrypto @ https://github.com/abhiadi23/cbcrypto/releases/download/v0.5.1/cbcrypto-0.5.1-cp38-abi3-manylinux_2_28_x86_64.whl
-git+https://github.com/abhiadi23/cbgram.git@67a7549
+git+https://github.com/abhiadi23/cbgram.git@2d5b610
 motor
 dnspython
 hachoir
