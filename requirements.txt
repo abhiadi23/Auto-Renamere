@@ -1,5 +1,5 @@
-cbcrypto==0.6.0
-cbgram==3.1.8
+cbcrypto==0.6.1
+cbgram==3.1.9
 motor
 dnspython
 hachoir
